@@ -4,7 +4,7 @@ import org.apache.commons.lang3.text.StrSubstitutor;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.net.URLStreamHandler;
@@ -24,7 +24,7 @@ public class ServletProcessor {
         String uri = request.getUri();
         String servletName = uri.substring(uri.lastIndexOf("/") + 1);
         URLClassLoader loader = null;
-        OutputStream output = null;
+        PrintWriter writer = null;
 
         try {
             URL[] urls = new URL[1];
@@ -37,6 +37,13 @@ public class ServletProcessor {
             System.out.println(e.toString());
         }
 
+        try {
+            response.setCharacterEncoding("UTF-8");
+            writer = response.getWriter();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         Class<?> servletClass = null;
         try {
             servletClass = loader.loadClass(servletName);
@@ -44,14 +51,8 @@ public class ServletProcessor {
             System.out.println(e.toString());
         }
 
-        output = response.getOutput();
         String head = composeResponseHead();
-        try {
-            output.write(head.getBytes("utf-8"));
-        } catch (IOException e) {
-            System.out.println(e.toString());
-        }
-
+        writer.println(head);
         Servlet servlet = null;
         try {
             servlet = (Servlet) servletClass.newInstance();
@@ -61,13 +62,6 @@ public class ServletProcessor {
         } catch (Throwable e) {
             System.out.println(e.toString());
         }
-
-        try {
-            output.flush();
-        } catch (IOException e) {
-            System.out.println(e.toString());
-        }
-
     }
 
     private String composeResponseHead() {

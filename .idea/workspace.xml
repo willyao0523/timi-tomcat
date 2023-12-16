@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acfb2494-38f2-43c0-a79b-fe664e32aafd" name="Changes" comment="feat: initial commit and finish the basic java web server">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/server/Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/server/ServletProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/server/StaticResourceProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/test/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="acfb2494-38f2-43c0-a79b-fe664e32aafd" name="Changes" comment="feat: add servlet">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/HttpConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/HttpProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Servlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/ServletProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ServletProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/HelloServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/timi-tomcat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/timi-tomcat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/test/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/test/HelloServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702371767023</updated>
       <workItem from="1702371768060" duration="3271000" />
-      <workItem from="1702653136525" duration="3950000" />
+      <workItem from="1702653136525" duration="7733000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit and finish the basic java web server">
       <created>1702374511227</created>
@@ -125,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702374511227</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add servlet">
+      <created>1702657414839</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702657414839</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,42 +139,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: initial commit and finish the basic java web server" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: initial commit and finish the basic java web server" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/server/HttpServer.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/server/ServletProcessor.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/server/ServletProcessor.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/server/ServletProcessor.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/server/ServletProcessor.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/server/ServletProcessor.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="feat: add servlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add servlet" />
   </component>
 </project>
