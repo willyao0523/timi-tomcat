@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acfb2494-38f2-43c0-a79b-fe664e32aafd" name="Changes" comment="feat: add servlet">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/server/HttpConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/server/HttpProcessor.java" afterDir="false" />
+    <list default="true" id="acfb2494-38f2-43c0-a79b-fe664e32aafd" name="Changes" comment="refactor: split http server and add connector and processor">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Servlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/ServletProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ServletProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timi-tomcat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/timi-tomcat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/test/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/test/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/HttpConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/HttpConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/HttpProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/HttpProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,21 +47,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.server.HttpServer">
     <configuration name="HttpServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.server.HttpServer" />
@@ -114,7 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1702371767023</updated>
       <workItem from="1702371768060" duration="3271000" />
-      <workItem from="1702653136525" duration="7733000" />
+      <workItem from="1702653136525" duration="8616000" />
+      <workItem from="1702873594844" duration="2492000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit and finish the basic java web server">
       <created>1702374511227</created>
@@ -130,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702657414839</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor: split http server and add connector and processor">
+      <created>1702708842864</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702708842864</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +139,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: initial commit and finish the basic java web server" />
     <MESSAGE value="feat: add servlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add servlet" />
+    <MESSAGE value="refactor: split http server and add connector and processor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: split http server and add connector and processor" />
   </component>
 </project>
