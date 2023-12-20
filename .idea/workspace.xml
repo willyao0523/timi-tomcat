@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acfb2494-38f2-43c0-a79b-fe664e32aafd" name="Changes" comment="refactor: split http server and add connector and processor">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="acfb2494-38f2-43c0-a79b-fe664e32aafd" name="Changes" comment="feat: add processor pool">
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/DefaultHeaders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/HttpHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/HttpRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/HttpRequestLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/HttpResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/SocketInputStream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/HttpConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/HttpConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/HttpProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/HttpProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +109,8 @@
       <updated>1702371767023</updated>
       <workItem from="1702371768060" duration="3271000" />
       <workItem from="1702653136525" duration="8616000" />
-      <workItem from="1702873594844" duration="2492000" />
+      <workItem from="1702873594844" duration="3034000" />
+      <workItem from="1703040218822" duration="5288000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit and finish the basic java web server">
       <created>1702374511227</created>
@@ -129,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702708842864</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: add processor pool">
+      <created>1702876148150</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702876148150</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +151,7 @@
     <MESSAGE value="feat: initial commit and finish the basic java web server" />
     <MESSAGE value="feat: add servlet" />
     <MESSAGE value="refactor: split http server and add connector and processor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: split http server and add connector and processor" />
+    <MESSAGE value="feat: add processor pool" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add processor pool" />
   </component>
 </project>
